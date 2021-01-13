@@ -22,7 +22,7 @@ private
 
   def self.getScrappedDataField(url)
       html = Nokogiri::HTML (open(url));
-      puts html.xpath("//div//p").collect(&:text)
+    # puts html.xpath("//div//p").collect(&:text)
       scrappedData= html.at_css("div#grey div").text;
 
   end
