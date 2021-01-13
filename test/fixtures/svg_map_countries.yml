@@ -1,0 +1,51 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pathID: MyString
+  pathD: MyText
+  latitude: 9.99
+  longitude: 9.99
+  geoId: 1
+  juristic: MyString
+  methodNumber: 1
+  fajr: 1
+  isha: 1
+  ajaxUrl: MyText
+  scrapedDate: MyString
+  country: MyString
+  capital: MyString
+  hijriDay: 1
+  hijriMonth: 1
+  hijriYear: 1
+  lastUpdate: 2020-12-17 19:06:57
+  hijriNight: 1
+  fajr: 2020-12-17 19:06:57
+  duhr: 2020-12-17 19:06:57
+  asr: 2020-12-17 19:06:57
+  maghrib: 2020-12-17 19:06:57
+  isha: 2020-12-17 19:06:57
+
+two:
+  pathID: MyString
+  pathD: MyText
+  latitude: 9.99
+  longitude: 9.99
+  geoId: 1
+  juristic: MyString
+  methodNumber: 1
+  fajr: 1
+  isha: 1
+  ajaxUrl: MyText
+  scrapedDate: MyString
+  country: MyString
+  capital: MyString
+  hijriDay: 1
+  hijriMonth: 1
+  hijriYear: 1
+  lastUpdate: 2020-12-17 19:06:57
+  hijriNight: 1
+  fajr: 2020-12-17 19:06:57
+  duhr: 2020-12-17 19:06:57
+  asr: 2020-12-17 19:06:57
+  maghrib: 2020-12-17 19:06:57
+  isha: 2020-12-17 19:06:57

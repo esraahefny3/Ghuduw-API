@@ -1,0 +1,2 @@
+class SvgMapCountry < ApplicationRecord
+end

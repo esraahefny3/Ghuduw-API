@@ -1,0 +1,2 @@
+module HigriDatesHelper
+end
