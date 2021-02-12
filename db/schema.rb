@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_17_170657) do
+ActiveRecord::Schema.define(version: 2021_02_02_114948) do
 
   create_table "svg_map_countries", force: :cascade do |t|
     t.string "pathID"
@@ -31,13 +31,14 @@ ActiveRecord::Schema.define(version: 2020_12_17_170657) do
     t.integer "hijriYear"
     t.datetime "lastUpdate"
     t.integer "hijriNight"
-    t.time "fajrTime"
-    t.time "duhrTime"
-    t.time "asrTime"
-    t.time "maghribTime"
-    t.time "ishaTime"
+    t.string "fajrTime"
+    t.string "duhrTime"
+    t.string "asrTime"
+    t.string "maghribTime"
+    t.string "ishaTime"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "sunriseTime"
   end
 
 end

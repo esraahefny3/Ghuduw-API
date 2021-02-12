@@ -2,9 +2,9 @@
 class HigriDatesController < ApplicationController
 
   #scrape data from islamicfinder website and update dates in db
-  def updateCountriesDate
-    ScrappedDatesService.updateCountriesDates;
-  end
+  # def updateCountriesDate
+  #   ScrappedDatesService.updateCountriesDates;
+  # end
   #
   # def getData
   #
