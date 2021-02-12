@@ -64,6 +64,7 @@ class ScrappedingDatesJob include Sidekiq::Worker
         higriMonth=higriMonth+scrappedDataArr[i];
         i=i+1;
       end
+         
       svgMapCountryRow.update(hijriMonth:higriMonth[0..-2]);
       svgMapCountryRow.update(hijriYear:scrappedDataArr[-1]);
   end
