@@ -1,0 +1,4 @@
+scrapping_job:
+  cron: "*/10 * * * *" #it will retrieve data every 1 minute
+  # cron: "0 0 * * *"
+  class: "ScrappedingDatesJob"

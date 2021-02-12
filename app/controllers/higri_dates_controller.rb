@@ -32,4 +32,8 @@ class HigriDatesController < ApplicationController
   def loadData
    CsvFileDataService.loadCSVFileToSvgMapCountry;
   end
+
+  def getLocationDates
+    render :json => LocationDatesService.getLocationDates(params[:latitude],params[:longitude]);
+  end
 end

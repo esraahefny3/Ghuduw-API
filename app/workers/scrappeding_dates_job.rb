@@ -1,10 +1,9 @@
 
 require 'open-uri'
 require 'nokogiri'
-require 'sidekiq-scheduler'
 
 class ScrappedingDatesJob include Sidekiq::Worker
-  queue_as :default
+
 
 
   FAJR_TIME_XPATH="string(//div[translate(normalize-space(p), ' ', '')='Fajr']/p[3])";
@@ -14,9 +13,8 @@ class ScrappedingDatesJob include Sidekiq::Worker
   MAGHRIB_TIME_XPATH="string(//div[translate(normalize-space(p), ' ', '')='Maghrib']/p[3])";
   ISHA_TIME_XPATH="string(//div[translate(normalize-space(p), ' ', '')='Isha']/p[3])";
   HIGRI_DATE_XPATH="div#grey div";
-  def perform 
-    arr=getAllCountriesIdsAndUrls;
-    byebug
+  def perform()
+     arr=getAllCountriesIdsAndUrls;
     arr.each do |subArr|
       # subArr[0]=>id
       # subArr[1]=>url
@@ -51,7 +49,15 @@ class ScrappedingDatesJob include Sidekiq::Worker
 
   def updateHigriTimeFields(svgMapCountryRow,scrappedData)
       scrappedDataArr = scrappedData.split(' ');
-      svgMapCountryRow.update(hijriDay:scrappedDataArr[0][0..-3]);
+      # set higri day
+      higriDay=scrappedDataArr[0][0..-3];
+      svgMapCountryRow.update(hijriDay:higriDay);
+      # set higri night
+      if higriDay<29
+      svgMapCountryRow.update(hijriNight:higriDay.to_i+1);
+      # else
+      end
+        # set higri month
       i=1;
       higriMonth='';
       while i<scrappedDataArr.length()-1 do
